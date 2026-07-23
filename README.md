@@ -1,2 +1,2 @@
-# website2
+# Website
 My static personal website
