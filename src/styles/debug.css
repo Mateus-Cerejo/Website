@@ -1,0 +1,31 @@
+#container {
+    background-color: green;
+}
+
+#intro  {
+    background-color: gray; 
+}
+
+#intro-left {
+    background-color: blueviolet;
+}
+
+#intro-right {
+    background-color: blue;
+}
+
+#intro-name {
+    background-color: red;
+}
+
+#navigation {
+    background-color: bisque;
+}
+
+header {
+    background-color: brown;
+}
+
+footer {
+    background-color: aquamarine;
+}
