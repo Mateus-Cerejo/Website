@@ -1,0 +1,13 @@
+@import url("fonts.css");
+
+body {
+    background-color: black;
+    color: white;
+    font-family: myFont;
+}
+
+a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: unset;
+}

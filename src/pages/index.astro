@@ -5,13 +5,43 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<link rel="stylesheet" href="/src/styles/global.css">
+		<link rel="stylesheet" href="/src/styles/index.css">
+
+		<script src="/src/pages/debug.js"/>
+		
 		<title>Mateus Cerejo - Portfolio</title>
 	</head>
 	<body>
-		<h1>Mateus Cerejo</h1>
+		<header>
+			<button>EN</button>
+		</header>
+		<!-- <div id="test"> -->
+			<div id="main">
+				<div id="intro">
+					<div id="intro-left">
+						<img class="avatar" src="/avatar-low-rez.jpg" alt="Avatar">
+						<a id="about" href="/about">About</a>
+					</div>
+					<div id="intro-right">
+						<p id="intro-name">Mateus Cerejo</p>
+						<p id="intro-slogan">Software Engineer</p>
+					</div>
+				</div>
+				<div id="navigation">
+					<a href="/projects">Projects</a>
+					<br>
+					<a href="/cv">Curriculum Vitae</a>
+				</div>
+			</div>
+		<!-- </div> -->
+		<footer>
+			<a href="mailto:mateussoftware@proton.me">mateussoftware@proton.me</a>
+			<p>Lisbon, Portugal</p>
+		</footer>
 	</body>
 </html>
