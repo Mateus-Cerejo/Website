@@ -5,7 +5,7 @@ var debugging = false;
 function enableDebugCSS() {
     const debugCSSLink = document.createElement('Link');
     debugCSSLink.setAttribute('rel', 'stylesheet');
-    debugCSSLink.setAttribute('href', '/src/styles/debug.css');
+    debugCSSLink.setAttribute('href', '/src/dev/debug.css');
     debugCSSLink.setAttribute('id', 'debugcss');
     document.getElementsByTagName('head')[0].appendChild(debugCSSLink);
 }
