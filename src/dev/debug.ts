@@ -11,12 +11,12 @@ function enableDebugCSS() {
 }
 
 function disableDebugCSS() {
-    document.getElementById('debugcss').remove();
+    document.getElementById('debugcss')?.remove();
 }
 
-function handleShortcut(event) {
+function handleShortcut(event: any) {
     if (event.key === "d") {
-        event.preventDefault();
+        event.preventDefault(); 
         if (debugging) {
             disableDebugCSS();
             debugging = false;
