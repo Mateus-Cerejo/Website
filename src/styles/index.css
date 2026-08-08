@@ -1,8 +1,13 @@
-html, body {
+html {
+    height: 100%;
+}
+
+body {
     --avatar-size: 68px;
     
-    height: 100%;
+    min-height: 100%;
     margin: 0;
+
     display: flex;
     flex-direction: column;
 }
@@ -12,31 +17,43 @@ header {
     min-height: 40px;
     max-height: 100px;
     padding: 10px 10px 0 10px;
+    
+    display: flex;
+    justify-content: center;
 }
 
-#main {
+header > * > a {
+    margin: 0px 10px;
+    font-weight: lighter;
+    text-decoration: underline 1px;
+    text-underline-offset: 2px;
+}
+
+#content {
+    flex: 80%;
+    min-height: 600px;
+    padding-top: 120px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
-    flex: 80%;
-    min-height: 600px;
 }
 
     #intro  {
+        position: relative;
+        
         display: flex;
-        flex-direction: column-reverse;
         justify-content: center;
         text-align: center;
-        position: relative;
     }
 
         #intro-left {
-            display: flex;
-            flex-direction: column;
             position: absolute;
             top: 0px;
             left: calc(-32%);
+
+            display: flex;
+            flex-direction: column;
         }
 
             #about {
@@ -61,8 +78,6 @@ header {
         #intro-right {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
             #intro-name {
@@ -77,19 +92,23 @@ header {
             }
 
     #navigation {
+        min-height: 200px;
+        margin-top: 8%;
+
         display: flex;
         flex-direction: column;
-        align-items: center;
-        min-height: 200px;
-        height: 100%;
         text-align: center;
-        margin-top: 8%;
     }
 
         #navigation a {
             margin-top: 10%;
+            margin-bottom: 20px;
             font-size: 42px;
             font-weight: normal;
+        }
+
+        #about-link {
+            display: none;
         }
 
         #navigation a:hover {
@@ -98,24 +117,26 @@ header {
 
 
 footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     flex: 10%;
     min-height: 60px;
+    max-height: 100px;
+
+    display: flex;
+    justify-content: center;
 }
 
     #footer-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-self: center;
+        align-self: end;
         width: 50%;
-        max-height: 100%;
+        max-height: 100px;
         min-width: 280px;
 
         font-size: 20px;
         text-align: center;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
         footer > * > a {
@@ -137,42 +158,42 @@ footer {
 
 @media only screen and (max-width: 800px) {
     /* Remove some padding on the top */
-    #main {
+    #content {
         padding-top: 50px;
     }
 
-    /* Move avatar from the left of the name to the bottom */
+    #intro {
+        margin-bottom: 40px;
+    }
     #intro-left {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-        left: 0px;
+        display: none;
+    }
+
+    #intro-name {
+        margin-top: 10px;
     }
 
     #navigation a {
         font-size: 36px;
+    }
+
+    #about-link {
+        display: inline;
+    }
+
+    #footer-wrap {
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     /* Remove some padding on the top */
-    #main {
+    #content {
         padding-top: 0px;
     }
 
-    /* Move avatar from the left of the name to the bottom */
-    #intro-left {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-        left: 0px;
-    }
-
     #navigation a {
-        font-size: 36px;
+        font-size: 32px;
     }
-
 }
 
