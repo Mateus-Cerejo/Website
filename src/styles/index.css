@@ -32,7 +32,7 @@ header > * > a {
 #content {
     flex: 80%;
     min-height: 600px;
-    padding-top: 120px;
+    padding-top: 10px;
 
     display: flex;
     flex-direction: column;
@@ -139,13 +139,12 @@ footer {
         justify-content: space-around;
     }
 
-        footer > * > a {
+        footer > a {
             font-weight: normal;
-            padding: 0px;
-            margin: 0px;
+            padding-bottom: 10px;
         }
 
-        footer > * > a:hover {
+        footer > a:hover {
             text-decoration: underline;
         }
 
@@ -153,13 +152,19 @@ footer {
             padding-top: 0;
             margin-top: 0;
         }
+    
+    #version {
+        position: fixed;
+        bottom: 0px;
+        right: 10px;
+    }
 
 
 
 @media only screen and (max-width: 800px) {
-    /* Remove some padding on the top */
+    /* Remove  padding on the top */
     #content {
-        padding-top: 50px;
+        padding-top: 0px;
     }
 
     #intro {
@@ -183,6 +188,10 @@ footer {
 
     #footer-wrap {
         font-size: 16px;
+    }
+
+    #version {
+        font-size: 12px;
     }
 }
 
