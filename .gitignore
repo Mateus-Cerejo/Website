@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# wrangler local files
+.wrangler/
+
 # dependencies
 node_modules/
 
