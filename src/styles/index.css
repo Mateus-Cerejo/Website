@@ -29,6 +29,10 @@ header > * > a {
     text-underline-offset: 2px;
 }
 
+.spacer {
+    width: 7px;
+}
+
 #content {
     flex: 80%;
     min-height: 600px;
