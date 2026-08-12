@@ -1,43 +1,8 @@
-html {
-    height: 100%;
-}
-
 body {
     --avatar-size: 68px;
-    
-    min-height: 100%;
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    flex: 10%;
-    min-height: 40px;
-    max-height: 100px;
-    padding: 10px 10px 0 10px;
-    
-    display: flex;
-    justify-content: center;
-}
-
-header > * > a {
-    margin: 0px 10px;
-    font-weight: lighter;
-    text-decoration: underline 1px;
-    text-underline-offset: 2px;
-}
-
-.spacer {
-    width: 7px;
 }
 
 #content {
-    flex: 80%;
-    min-height: 600px;
-    padding-top: 10px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,52 +84,6 @@ header > * > a {
             /* text-decoration: underline 1px; */
         }
 
-
-footer {
-    flex: 10%;
-    min-height: 60px;
-    max-height: 100px;
-
-    display: flex;
-    justify-content: center;
-}
-
-    #footer-wrap {
-        align-self: end;
-        width: 50%;
-        max-height: 100px;
-        min-width: 280px;
-
-        font-size: 20px;
-        text-align: center;
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-        footer > a {
-            font-weight: normal;
-            padding-bottom: 10px;
-        }
-
-        footer > a:hover {
-            text-decoration: underline;
-        }
-
-        footer > * > p {
-            padding-top: 0;
-            margin-top: 0;
-        }
-    
-    #version {
-        position: fixed;
-        bottom: 0px;
-        right: 10px;
-    }
-
-
-
 @media only screen and (max-width: 800px) {
     /* Remove  padding on the top */
     #content {
@@ -188,14 +107,6 @@ footer {
 
     #about-link {
         display: inline;
-    }
-
-    #footer-wrap {
-        font-size: 16px;
-    }
-
-    #version {
-        font-size: 12px;
     }
 }
 

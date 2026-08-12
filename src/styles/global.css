@@ -4,10 +4,26 @@
   color-scheme: dark;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
+    margin: 0;
+
     background-color: black;
     color: white;
     font-family: myFont;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    flex: 80%;
+    min-height: 600px;
+    padding-top: 10px;
 }
 
 a {
