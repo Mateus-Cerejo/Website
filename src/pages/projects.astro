@@ -1,7 +1,12 @@
 ---
 import '/src/styles/global.css';
 import '/src/styles/projects.css';
-// import '/src/styles/debug.css';
+import '/src/styles/header.css';
+import '/src/styles/footer.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Project from '../components/project.astro';
 
 ---
 
@@ -17,5 +22,33 @@ import '/src/styles/projects.css';
 		<title>Mateus Cerejo - Projects</title>
 	</head>
 	<body>
+		<Header/>
+		<section id="content">
+			<p id="pageTitle">Projects</p>
+			<div id="galleryWrapper">
+				<div id="gallery">
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+					<Project></Project>
+				</div>
+			</div>
+		</section>
+		<Footer/>
 	</body>
 </html>

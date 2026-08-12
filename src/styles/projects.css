@@ -1,25 +1,39 @@
-body {
-    background-color: rgb(79, 82, 85);
-    margin: 0;
-}
-
-#container {
+#content {
     display: flex;
     flex-direction: column;
-    height: 100dvh;
+    align-items: center;
 }
 
-#top {
-    background-color: red;
-    flex: 1;
+#pageTitle {
+    font-size: 48px;
 }
 
-#middle {
-    background-color: green;
-    height: 70%;
+#galleryWrapper {
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#bottom {
-    background-color: blue;
-    flex: 1;
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectCard {
+    background-color: rgb(129, 129, 129);
+
+    min-width: 400px;
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+}
+
+.projectImg {
+    width: 380px;
+    border-radius: 3px;
 }
