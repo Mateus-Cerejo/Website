@@ -1,8 +1,11 @@
 ---
 import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
 import '/src/styles/global.css';
 import '/src/styles/index.css';
-// import '/src/styles/debug.css';
+import '/src/styles/header.css';
+import '/src/styles/footer.css';
 ---
 
 <html lang="en">
@@ -37,14 +40,6 @@ import '/src/styles/index.css';
 				<a href="/contact">Contact</a>
 			</div>
 		</section>
-		<footer>
-			<div id="footer-wrap">
-				<!-- <p>
-					Contact: <a href="mailto:mateussoftware@proton.me">mateussoftware@proton.me</a>
-				</p> -->
-				<p>Lisbon, Portugal</p>
-			</div>
-			<a id="version" href="https://github.com/Mateus-Cerejo/Website" target="_blank">v0.1.0</a>
-		</footer>
+		<Footer></Footer>
 	</body>
 </html>
