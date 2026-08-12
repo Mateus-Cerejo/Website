@@ -1,0 +1,21 @@
+
+header {
+    flex: 10%;
+    min-height: 40px;
+    max-height: 100px;
+    padding: 10px 10px 0 10px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+header > * > a {
+    margin: 0px 10px;
+    font-weight: lighter;
+    text-decoration: underline 1px;
+    text-underline-offset: 2px;
+}
+
+.spacer {
+    width: 7px;
+}
