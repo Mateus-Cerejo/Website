@@ -9,7 +9,7 @@
 }
 
 #galleryWrapper {
-    width: 70%;
+    width: 90%;
 
     display: flex;
     justify-content: center;
@@ -24,16 +24,42 @@
 }
 
 .projectCard {
-    background-color: rgb(129, 129, 129);
-
-    min-width: 400px;
+    width: 30%;
+    min-width: 280px;
+    
     padding: 10px;
     margin: 10px;
+}
 
-    text-align: center;
+
+.projectTags {
+    text-align: start;
+}
+
+.projectTag {
+    display: inline;
+    padding: 3px;
+    margin-right: 10px;
+    background-color: rgb(87, 87, 87);
+    border-radius: 3px;
 }
 
 .projectImg {
-    width: 380px;
+    max-width: 100%;
     border-radius: 3px;
+}
+
+.projectTitle {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 0px;
+}
+
+.projectDesc {
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 800px) {
+
 }
