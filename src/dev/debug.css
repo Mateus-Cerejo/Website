@@ -39,5 +39,13 @@ footer {
 }
 
 #gallery {
-    background-color: azure;
+    background-color: yellowgreen;
+}
+
+.projectImgWrap {
+    background-color: green;
+}
+
+.projectImg {
+    background-color: red;
 }

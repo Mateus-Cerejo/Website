@@ -9,7 +9,7 @@
 }
 
 #galleryWrapper {
-    width: 90%;
+    width: 80%;
 
     display: flex;
     justify-content: center;
@@ -25,41 +25,57 @@
 
 .projectCard {
     width: 30%;
-    min-width: 280px;
+    min-width: 300px;
+    max-width: 500px;
+
+    border-radius: 5px;
     
     padding: 10px;
-    margin: 10px;
+    margin: 30px 10px;
 }
-
 
 .projectTags {
     text-align: start;
+    padding: 5px;
 }
 
 .projectTag {
     display: inline;
-    padding: 3px;
-    margin-right: 10px;
-    background-color: rgb(87, 87, 87);
+    margin: 0px 10px 0px 0px;
     border-radius: 3px;
 }
 
+.projectImgWrap {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .projectImg {
-    max-width: 100%;
-    border-radius: 3px;
+    background-color: #c1c2c3ff;
+
+    width: 100%;
+    padding: 5px;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.projectImgUnderLine {
+    width: 80%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 
 .projectTitle {
     text-align: center;
     font-size: xx-large;
+    margin-top: 10px;
     margin-bottom: 0px;
 }
 
 .projectDesc {
     text-align: center;
-
-}
-
-@media only screen and (max-width: 800px) {
-
 }
