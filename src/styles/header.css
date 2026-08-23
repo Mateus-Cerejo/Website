@@ -1,9 +1,6 @@
 
 header {
-    flex: 10%;
-    min-height: 40px;
-    max-height: 100px;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 10px 10px;
     
     display: flex;
     justify-content: center;
