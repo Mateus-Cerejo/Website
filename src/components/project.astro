@@ -1,18 +1,19 @@
 ---
+const { name, desc, tags, imgSrc } = Astro.props;
 
 ---
 
 <div class="projectCard">
     <div class="projectTags">
-        <p class="projectTag">C#</p>
-        <p class="projectTag">Unity</p>
-        <p class="projectTag">Blender</p>
+        {tags.map((tag: String) => {
+            return <p class="projectTag">{tag}</p>;
+        })}
     </div>
     <div class="projectImgWrap">
         <!-- <div class="projectImg"></div> -->
-        <img class="projectImg" src="/project1.png" alt="Project Clouds Image">
+        <img class="projectImg" src=`${imgSrc}` alt="Project Clouds Image">
         <div class="projectImgUnderLine"></div>
     </div>
-    <p class="projectTitle">CLOUDS</p>
-    <p class="projectDesc">OpenGL & C++ Experiment</p>
+    <p class="projectTitle">{name}</p>
+    <p class="projectDesc">{desc}</p>
 </div>

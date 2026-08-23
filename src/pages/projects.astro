@@ -8,6 +8,28 @@ import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Project from '../components/project.astro';
 
+
+const projects = [
+	{
+		name: "CLOUDS",
+		desc: "OpenGL & C++ Experiment",
+		tags: ["OpenGL", "C++"],
+		imgSrc: "/project1.png"
+	},
+	{
+		name: "WLTS",
+		desc: "Desktop Multiplayer Game",
+		tags: ["Unity", "C#", "Blender"],
+		imgSrc: "/project1.png"
+	},
+	{
+		name: "Boomerang",
+		desc: "Wireless Split Keyboard",
+		tags: ["Kicad", "Orca Slicer"],
+		imgSrc: "/project1.png"
+	}
+];
+
 ---
 
 <html lang="en">
@@ -27,11 +49,9 @@ import Project from '../components/project.astro';
 			<p id="pageTitle">Projects</p>
 			<div id="galleryWrapper">
 				<div id="gallery">
-					<Project></Project>
-					<Project></Project>
-					<Project></Project>
-					<Project></Project>
-					<Project></Project>
+					{projects.map((proj)=>{
+						return <Project name={proj.name} desc={proj.desc} tags={proj.tags} imgSrc={proj.imgSrc}></Project>;
+					})}
 				</div>
 			</div>
 		</section>
