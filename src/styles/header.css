@@ -1,12 +1,19 @@
 
 header {
-    padding: 10px 10px 10px 10px;
+    padding: 20px 20px 10px 10px;
     
     display: flex;
     justify-content: center;
 }
 
 header > * > a {
+    margin: 0px 10px;
+    font-weight: lighter;
+    /* text-decoration: underline 1px;
+    text-underline-offset: 2px; */
+}
+
+header > div:nth-child(2) > a:first-child {
     margin: 0px 10px;
     font-weight: lighter;
     text-decoration: underline 1px;
