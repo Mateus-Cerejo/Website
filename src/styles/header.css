@@ -1,21 +1,32 @@
 
 header {
-    padding: 20px 20px 10px 10px;
-    
-    display: flex;
-    justify-content: center;
+    padding: 25px 0px 25px 0px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    border-bottom: solid white 0.5px;
 }
 
-header > * > a {
+header > div {
+    display: flex;
+    background-color: black;
+
+    justify-content: center;
+    align-items: end;
+}
+
+header > div > * > a {
     margin: 0px 10px;
     font-weight: lighter;
+    font-size: 16px;
+    
     /* text-decoration: underline 1px;
     text-underline-offset: 2px; */
 }
 
-header > div:nth-child(2) > a:first-child {
+header > div > div:nth-child(2) > a:first-child {
     margin: 0px 10px;
-    font-weight: lighter;
+    font-weight: light;
     text-decoration: underline 1px;
     text-underline-offset: 2px;
 }

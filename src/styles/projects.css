@@ -9,12 +9,21 @@
     font-size: 48px;
     margin-top: 110px;
     margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 #goHome {
-    text-decoration: underline;
+    font-size: 20px;
+    position: absolute;
+    left: 10%;
     font-weight: lighter;
-    margin-bottom: 100px;
+}
+
+#goHome2 {
+    font-size: 20px;
+    position: absolute;
+    right: 10%;
+    font-weight: lighter;
 }
 
 #galleryWrapper {
@@ -35,7 +44,6 @@
 .projectCard {
     width: 30%;
     min-width: 300px;
-    max-width: 500px;
 
     border-radius: 5px;
     
@@ -80,11 +88,36 @@
 
 .projectTitle {
     text-align: center;
-    font-size: xx-large;
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
 .projectDesc {
     text-align: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #goHome {
+        font-size: 20px;
+        position: fixed;
+        left: 5%;
+        top: 2.7%;
+        font-weight: lighter;
+    }
+
+    #goHome2 {
+        font-size: 20px;
+        position: fixed;
+        right: 5%;
+        top: 2.7%;
+        font-weight: lighter;
+    }
+
+    #pageTitle {
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
 }
