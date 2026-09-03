@@ -1,0 +1,34 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#pageTitle {
+    font-size: 48px;
+    margin-top: 110px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#downloadSection{
+    margin-bottom: 60px;
+
+    display: flex;
+}
+
+#downloadPDFBtn {
+    width: 18px;
+    padding: 0px 10px;
+}
+
+#listResume {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cvCategoryTitle {
+    font-size: 34px;
+}
