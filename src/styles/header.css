@@ -14,7 +14,7 @@ header {
     height: var(--headerHeight);
     width: 100%;
     max-width: 1280px;
-    border-bottom: solid white 0.5px;
+    border-bottom: solid rgb(145, 145, 145) 0.5px;
     
     
     display: grid;

@@ -49,3 +49,22 @@ footer {
 .projectImg {
     background-color: red;
 }
+
+#cvCategoryEducation {
+    background-color: aqua;
+}
+#cvCategorySkills {
+    background-color: red;
+}
+#cvCategoryCertifications {
+    background-color: green;
+}
+#cvCategoryLanguages {
+    background-color: bisque;
+}
+#cvCategoryWork {
+    background-color: aquamarine;
+}
+#cvCategoryProjects {
+    background-color: hotpink;
+}

@@ -1,3 +1,7 @@
+:root {
+    --resumeIndent: 50px;
+}
+
 #content {
     display: flex;
     flex-direction: column;
@@ -12,15 +16,24 @@
     text-align: center;
 }
 
-#downloadSection{
+#requestPDFSection{
     margin-bottom: 60px;
+    font-size: 18px;
 
     display: flex;
 }
 
-#downloadPDFBtn {
+    #requestPDFSection > p{
+        margin: 0;
+    }
+
+    #requestPDFSection > a{
+        display: flex;
+    }
+
+#requestPDFBtn {
     width: 18px;
-    padding: 0px 10px;
+    padding: 2px 5px 0 5px;
 }
 
 #listResume {
@@ -31,4 +44,117 @@
 
 .cvCategoryTitle {
     font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.degree {
+    margin-left: var(--resumeIndent);
+}
+
+.degreeTitle {
+    font-size: 26px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.degreeSchoolName {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.degreeDates {
+    margin-top: 8px;
+    margin-bottom: 0px;
+
+}
+
+.degreeGrade {
+    margin-top: 8px;
+}
+
+.infoImg {
+    width: 12px;
+    padding-bottom: 4px;
+}
+
+#skillsList {
+    margin-left: var(--resumeIndent);
+}
+
+.skills > span{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.skills {
+    font-size: 20px;
+    padding: 6px 0;
+}
+
+.certification {
+    margin-left: var(--resumeIndent);
+}
+
+.certTitle {
+    font-size: 26px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.certTitle > span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.certEntity {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.certGrade {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.cvLanguage {
+    margin-left: var(--resumeIndent);
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.cvLanguage > span {
+    font-weight: bold;
+}
+
+.job {
+    margin-left: var(--resumeIndent);
+}
+
+.jobTitle {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+    .jobTitle > span {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.jobEntity {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+#cvCategoryProjects {
+}
+
+.cvProject {
+    margin-left: var(--resumeIndent);
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }

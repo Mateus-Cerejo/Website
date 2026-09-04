@@ -20,9 +20,9 @@ import '/src/styles/resume.css'
 		<Header/>
 		<section id="content">
 			<p id="pageTitle">Curriculum Vitae</p>
-            <div id="downloadSection">
+            <div id="requestPDFSection">
                 <p>PDF VERSION</p>
-                <img id="downloadPDFBtn" src="/download.svg" alt="download">
+                <a href="mailto:mateussoftware@proton.me?subject=Request%20for%20resume%20pdf" title="Request resume pdf"><img id="requestPDFBtn" src="/email.svg" alt="Request resume pdf"></a>
             </div>
             <div id="listResume">
                 <div id="listLeft">
@@ -32,47 +32,62 @@ import '/src/styles/resume.css'
                             <p class="degreeTitle">Bachelor's Degree - Software Engineering</p>
                             <p class="degreeSchoolName">Instituto Politécnico de Setubal</p>
                             <p class="degreeDates">2021-2024</p>
-                            <p class="degreeGrade">ECTS grade - B</p>
+                            <p class="degreeGrade">ECTS grade - B <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"></a></p>
                         </div>
                     </div>
                     <div id="cvCategorySkills">
                         <p class="cvCategoryTitle">Relevant Skills</p>
                         <div id="skillsList">
-                            <p>OOP - Java, C++, C#, JavaScript, TypeScript</p>
-                            <p>Web / UI Frameworks - React, Astro, Flutter</p>
-                            <p>Graphics programming - OpenGL, GLSL</p>
-                            <p>Automation / Scripting - Python, bash</p>
-                            <p>Game Development - Unity, Blender, Gimp</p>
-                            <p>Project Management - Jira, Confluence, Trello, GitHub / Bitbucket</p>
-                            <p>Other - Git, C, Linux, Figma, Common Lisp, Astro</p>
+                            <li class="skills"><span>OOP</span> - Java, C++, C#, JavaScript, TypeScript</li>
+                            <li class="skills"><span>Web / UI Frameworks</span> - React, Astro, Flutter</li>
+                            <li class="skills"><span>Graphics programming</span> - OpenGL, GLSL</li>
+                            <li class="skills"><span>Automation / Scripting</span> - Python, bash</li>
+                            <li class="skills"><span>Game Development</span> - Unity, Blender, Gimp</li>
+                            <li class="skills"><span>Project Management</span> - Jira, Confluence, Trello, GitHub / Bitbucket</li>
+                            <li class="skills"><span>Other</span> - Git, C, Linux, Figma, Common Lisp, Astro</li>
                         </div>
                     </div>
                     <div id="cvCategoryCertifications">
                         <p class="cvCategoryTitle">Certifications</p>
                         <div class="certification">
-                            <p>Computer Graphics With Modern OpenGL - 2026</p>
-                            <p>Udemy</p>
-                            <p>Grade: N/A</p>
+                            <p class="certTitle">Computer Graphics With Modern OpenGL<span> - 2026</span></p>
+                            <p class="certEntity">Udemy</p>
+                            <p class="certGrade">Grade: N/A</p>
                         </div>
                         <div class="certification">
-                            <p>Advanced English C1 - 2026</p>
-                            <p>Cambridge</p>
-                            <p>Grade: A</p>
+                            <p class="certTitle">Advanced English C1<span> - 2026</span></p>
+                            <p class="certEntity">Cambridge</p>
+                            <p class="certGrade">Grade: A</p>
                         </div>
                     </div>
                     <div id="cvCategoryLanguages">
                         <p class="cvCategoryTitle">Languages</p>
-                        <p>Português - Fluent</p>
-                        <p>English - Proficient</p>
-                        <p>日本語 - Basic</p>
+                        <p class="cvLanguage" title="Português Portuguese ポルトガル語"><span>Português</span> - Fluent</p>
+                        <p class="cvLanguage" title="Inglês English 英語"><span>English</span> - Proficient</p>
+                        <p class="cvLanguage" title="Japonês Japanese 日本語"><span>日本語</span> - Basic</p>
                     </div>
                 </div>
                 <div id="listRight">
                     <div id="cvCategoryWork">
                         <p class="cvCategoryTitle">Work Experience</p>
+                        <div class="job">
+                            <p class="jobTitle">Middleware Developer<span> - Mar. 2025 - Mar. 2026</span></p>
+                            <p class="jobEntity">Bane Tech</p>
+                            <p class="jobTask">Developed high performance services </p>
+                        </div>
+                        <div class="job">
+                            <p class="jobTitle">React Frontend Developer<span> - Sep. 2024 - Nov. 2024</span></p>
+                            <p class="jobEntity">INSTICC</p>
+                            <p class="jobTask">Carried out migration of codebase</p>
+                            <p class="jobTask">Corrected and improved existing UI to fit user needs</p>
+                        </div>
                     </div>
                     <div id="cvCategoryProjects">
                         <p class="cvCategoryTitle">Projects</p>
+                        <p class="cvProject" title="We Love Typing Spells - Game">WLTS - Game</p>
+                        <p class="cvProject" title="You are here :)">Portfolio - Website</p>
+                        <p class="cvProject">Clouds - Concept</p>
+                        <p class="cvProject">Boomerang - Keyboard</p>
                     </div>
                 </div>
             </div>
