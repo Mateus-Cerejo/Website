@@ -1,0 +1,38 @@
+---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
+import '/src/styles/global.css';
+import '/src/styles/about.css'
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<script src="/src/dev/debug.ts"/>
+
+		<title>Mateus Cerejo - About</title>
+	</head>
+	<body>
+		<Header/>
+		<section id="content">
+			<p id="pageTitle">About</p>
+            <p id="intro">Hello this page is for a more personal introduction, maybe what you are looking for is <a href="/projects" class="bold">/projects</a> & <a href="resume" class="bold">/resume</a>.</p>
+            
+            <div id="img1">
+                <img src="/me.webp" alt="me">
+            </div>
+            
+            <p>Random facts:</p>
+            <ul>
+                <li>Born in 2004 (do the math)</li>
+                <li>Reside in Lisbon (for now)</li>
+                <li></li>
+            </ul>
+		</section>
+		<Footer/>
+	</body>
+</html>
