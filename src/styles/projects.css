@@ -12,20 +12,6 @@
     text-align: center;
 }
 
-#goHome {
-    font-size: 20px;
-    position: absolute;
-    left: 10%;
-    font-weight: lighter;
-}
-
-#goHome2 {
-    font-size: 20px;
-    position: absolute;
-    right: 10%;
-    font-weight: lighter;
-}
-
 #galleryWrapper {
     width: 80%;
 
@@ -74,7 +60,7 @@
     background-color: #c1c2c3ff;
 
     width: 100%;
-    padding: 5px;
+    padding: 2px;
 
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -99,25 +85,8 @@
 
 
 @media only screen and (max-width: 800px) {
-    #goHome {
-        font-size: 20px;
-        position: fixed;
-        left: 5%;
-        top: 2.7%;
-        font-weight: lighter;
-    }
-
-    #goHome2 {
-        font-size: 20px;
-        position: fixed;
-        right: 5%;
-        top: 2.7%;
-        font-weight: lighter;
-    }
-
     #pageTitle {
-        margin-top: 80px;
+        margin-top: 20px;
         margin-bottom: 40px;
     }
-
 }
