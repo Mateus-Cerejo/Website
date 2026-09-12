@@ -1,4 +1,9 @@
 @font-face {
-  font-family: myFont; /* set name */
+  font-family: Inria_Serif; /* set name */
   src: url(/Inria_Serif/InriaSerif-Light.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: Victor_Mono; /* set name */
+  src: url(/Victor_Mono/VictorMono-VariableFont_wght.ttf); /* url of the font */
 }
