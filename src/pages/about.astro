@@ -4,6 +4,22 @@ import Footer from '../components/footer.astro';
 
 import '/src/styles/global.css';
 import '/src/styles/about.css'
+
+var duolingoStreak = 'Fetching streak o_o'
+
+try {
+	await fetch("https://www.duolingo.com/2017-06-30/users?username=Suetam0101 ", {
+		signal: AbortSignal.timeout(5000),
+	})
+	.then(response => response.json())
+	.then(data => {
+		duolingoStreak = data.users[0].streak + ' Days :)';
+	});
+	
+} catch (error) {
+	duolingoStreak = 'Couldn\'t fetch streak :(';
+}
+
 ---
 <html lang="en">
 	<head>
@@ -58,7 +74,7 @@ import '/src/styles/about.css'
 					</div>
 					<div id="blockJpRight">
 						<img src="duo.png" alt="duolingo">
-						<p>30 Days</p>
+						<p>{duolingoStreak}</p>
 					</div>
 				</div>
 				<div id="blockGame" class="block">
