@@ -62,12 +62,14 @@ header {
     align-items: center;
 }
 
-#contacts > a > img {
-    width: 24px;
-}
-
 .contact {
     margin: 0px 5px;
+
+    display: flex;
+}
+
+.contact > img {
+    width: 24px;
 }
 
 
