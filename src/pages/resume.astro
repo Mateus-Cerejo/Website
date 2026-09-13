@@ -4,6 +4,152 @@ import Footer from '../components/footer.astro';
 
 import '/src/styles/global.css';
 import '/src/styles/resume.css'
+
+const resume = {
+    education: {
+        degrees: [
+            {
+                title: "Bachelor's Degree - Software Engineering",
+                entity: "Instituto Politécnico de Setubal",
+                date: "2021 - 2024",
+                grade: "ECTS Grade: B"
+            }
+        ]
+    },
+    workExperience: {
+        jobs: [
+            {
+                title: "Middleware Developer",
+                entity: "Bane Tech",
+                date: "Mar. 2025 - Mar. 2026",
+                tasks: [
+                    "Developed high performance services",
+                    "Monitored critical infrastructure"
+                ]
+            },
+            {
+                title: "React Frontend Internship",
+                entity: "INSTICC",
+                date: "Sep. 2024 - Nov. 2024",
+                tasks: [
+                    "Carried out migration of codebase",
+                    "Corrected and improved existing UI to fit user needs"
+                ]   
+            }
+        ]
+    },
+    skillList: [
+        {
+            title: "OOP",
+            skills: [
+                "Java",
+                "C++",
+                "C#",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        {
+            title: "Web / UI Frameworks",
+            skills: [
+                "React",
+                "Astro",
+                "Flutter",
+            ]
+        },
+        {
+            title: "Graphics programming",
+            skills: [
+                "OpenGL",
+                "GLSL",
+            ]
+        },
+        {
+            title: "Automation / Scripting",
+            skills: [
+                "Python",
+                "bash",
+            ]
+        },
+        {
+            title: "Game Development",
+            skills: [
+                "Unity",
+                "Blender",
+                "Gimp",
+            ]
+        },
+        {
+            title: "Project Management",
+            skills: [
+                "Jira",
+                "Confluence",
+                "Trello",
+                "GitHub / Bitbucket",
+            ]
+        },
+        {
+            title: "Other",
+            skills: [
+                "Git",
+                "C",
+                "Linux",
+                "Figma",
+                "Common Lisp"
+            ]
+        },
+    ],
+    certifications: [
+        {
+            title: "Computer Graphics With Modern OpenGL",
+            entity: "Udemy",
+            date: "2026",
+            grade: "N/A"
+        },
+        {
+            title: "Advanced English C1",
+            entity: "Cambridge",
+            date: "2026",
+            grade: "A"
+        }
+    ],
+    languages: [
+        {
+            name:"Português", 
+            level: "Fluent",
+            otherNames: "Português Portuguese ポルトガル語"
+        },
+        {
+            name:"English", 
+            level: "Proficient",
+            otherNames: "Inglês English 英語"
+        },
+        {
+            name:"日本語", 
+            level: "Basic",
+            otherNames: "Japonês Japanese 日本語"
+        },
+    ],
+    projects: [
+        {
+            title: "WLTS - Game",
+            tooltip: "We Love Typing Spells - Game"
+        },
+        {
+            title: "Portfolio - Website",
+            tooltip: "You are here :)"
+        },
+        {
+            title: "Clouds - Concept",
+            tooltip: ""
+        },
+        {
+            title: "Boomerang - Keyboard",
+            tooltip: ""
+        }
+    ],
+};
+
 ---
 <html lang="en">
 	<head>
@@ -24,71 +170,127 @@ import '/src/styles/resume.css'
                 <p>PDF VERSION</p>
                 <a href="mailto:mateuscerejo@proton.me?subject=Request%20for%20resume%20pdf" title="Request resume pdf"><img id="requestPDFBtn" src="/email.svg" alt="Request resume pdf"></a>
             </div>
-            <div id="listResume">
+            <div id="flexResume">
                 <div id="listLeft">
                     <div id="cvCategoryEducation">
                         <p class="cvCategoryTitle">Education</p>
-                        <div class="degree">
-                            <p class="degreeTitle">Bachelor's Degree - Software Engineering</p>
-                            <p class="degreeSchoolName">Instituto Politécnico de Setubal</p>
-                            <p class="degreeDates">2021-2024</p>
-                            <p class="degreeGrade">ECTS grade - B <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"></a></p>
-                        </div>
+                        {resume.education.degrees.map((degree)=>
+                            <div class="degree">
+                                <p class="degreeTitle">{degree.title}</p>
+                                <p class="degreeSchoolName">{degree.entity}</p>
+                                <p class="degreeDates">{degree.date}</p>
+                                <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"/></a></p>
+                            </div>
+                        )}
                     </div>
                     <div id="cvCategorySkills">
                         <p class="cvCategoryTitle">Relevant Skills</p>
                         <div id="skillsList">
-                            <li class="skills"><span>OOP</span> - Java, C++, C#, JavaScript, TypeScript</li>
-                            <li class="skills"><span>Web / UI Frameworks</span> - React, Astro, Flutter</li>
-                            <li class="skills"><span>Graphics programming</span> - OpenGL, GLSL</li>
-                            <li class="skills"><span>Automation / Scripting</span> - Python, bash</li>
-                            <li class="skills"><span>Game Development</span> - Unity, Blender, Gimp</li>
-                            <li class="skills"><span>Project Management</span> - Jira, Confluence, Trello, GitHub / Bitbucket</li>
-                            <li class="skills"><span>Other</span> - Git, C, Linux, Figma, Common Lisp, Astro</li>
+                            {resume.skillList.map((skillCatg)=>{
+                                if (skillCatg.title == "OOP") {
+                                    return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                                }
+                                return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                            })}
                         </div>
                     </div>
                     <div id="cvCategoryCertifications">
                         <p class="cvCategoryTitle">Certifications</p>
-                        <div class="certification">
-                            <p class="certTitle">Computer Graphics With Modern OpenGL<span> - 2026</span></p>
-                            <p class="certEntity">Udemy</p>
-                            <p class="certGrade">Grade: N/A</p>
-                        </div>
-                        <div class="certification">
-                            <p class="certTitle">Advanced English C1<span> - 2026</span></p>
-                            <p class="certEntity">Cambridge</p>
-                            <p class="certGrade">Grade: A</p>
-                        </div>
+                        {resume.certifications.map((cert)=>
+                            <div class="certification">
+                                <p class="certTitle">{cert.title}</p>
+                                <p class="certEntity">{cert.entity}</p>
+                                <p class="certDate">{cert.date}</p>
+                                <p class="certGrade">Grade: {cert.grade}</p>
+                            </div>
+                        )}
                     </div>
                     <div id="cvCategoryLanguages">
                         <p class="cvCategoryTitle">Languages</p>
-                        <p class="cvLanguage" title="Português Portuguese ポルトガル語"><span>Português</span> - Fluent</p>
-                        <p class="cvLanguage" title="Inglês English 英語"><span>English</span> - Proficient</p>
-                        <p class="cvLanguage" title="Japonês Japanese 日本語"><span>日本語</span> - Basic</p>
+                        {resume.languages.map((lang)=>
+                            <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
+                        )}
                     </div>
                 </div>
                 <div id="listRight">
                     <div id="cvCategoryWork">
                         <p class="cvCategoryTitle">Work Experience</p>
-                        <div class="job">
-                            <p class="jobTitle">Middleware Developer<span> - Mar. 2025 - Mar. 2026</span></p>
-                            <p class="jobEntity">Bane Tech</p>
-                            <p class="jobTask">Developed high performance services </p>
-                        </div>
-                        <div class="job">
-                            <p class="jobTitle">React Frontend Developer<span> - Sep. 2024 - Nov. 2024</span></p>
-                            <p class="jobEntity">INSTICC</p>
-                            <p class="jobTask">Carried out migration of codebase</p>
-                            <p class="jobTask">Corrected and improved existing UI to fit user needs</p>
-                        </div>
+                        {resume.workExperience.jobs.map((job)=>
+                            <div class="job">
+                                <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
+                                <p class="jobEntity">{job.entity}</p>
+                                {job.tasks.map((task)=>
+                                    <p class="jobTask">{task}</p>
+                                )}
+                            </div>
+                        )}
                     </div>
                     <div id="cvCategoryProjects">
                         <p class="cvCategoryTitle">Projects</p>
-                        <p class="cvProject" title="We Love Typing Spells - Game">WLTS - Game</p>
-                        <p class="cvProject" title="You are here :)">Portfolio - Website</p>
-                        <p class="cvProject">Clouds - Concept</p>
-                        <p class="cvProject">Boomerang - Keyboard</p>
+                        {resume.projects.map((proj)=>
+                            <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
+                        )}
                     </div>
+                </div>
+            </div>
+            <div id="listResume">
+                <div id="cvCategoryEducation">
+                    <p class="cvCategoryTitle">Education</p>
+                    {resume.education.degrees.map((degree)=>
+                        <div class="degree">
+                            <p class="degreeTitle">{degree.title}</p>
+                            <p class="degreeSchoolName">{degree.entity}</p>
+                            <p class="degreeDates">{degree.date}</p>
+                            <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"/></a></p>
+                        </div>
+                    )}
+                </div>
+                <div id="cvCategoryWork">
+                    <p class="cvCategoryTitle">Work Experience</p>
+                    {resume.workExperience.jobs.map((job)=>
+                        <div class="job">
+                            <p class="jobTitle">{job.title}</p>
+                            <p class="jobEntity">{job.entity}</p>
+                            <p class="jobDate">{job.date}</p>
+                            {job.tasks.map((task)=>
+                                <p class="jobTask">{task}</p>
+                            )}
+                        </div>
+                    )}
+                </div>
+                <div id="cvCategorySkills">
+                    <p class="cvCategoryTitle">Relevant Skills</p>
+                    <div id="skillsList">
+                        {resume.skillList.map((skillCatg)=>{
+                            if (skillCatg.title == "OOP") {
+                                return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                            }
+                            return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                        })}
+                    </div>
+                </div>
+                <div id="cvCategoryCertifications">
+                    <p class="cvCategoryTitle">Certifications</p>
+                    {resume.certifications.map((cert)=>
+                        <div class="certification">
+                            <p class="certTitle">{cert.title}</p>
+                            <p class="certEntity">{cert.entity}</p>
+                            <p class="certDate">{cert.date}</p>
+                            <p class="certGrade">Grade: {cert.grade}</p>
+                        </div>
+                    )}
+                </div>
+                <div id="cvCategoryProjects">
+                    <p class="cvCategoryTitle">Projects</p>
+                    {resume.projects.map((proj)=>
+                        <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
+                    )}
+                </div>
+                <div id="cvCategoryLanguages">
+                    <p class="cvCategoryTitle">Languages</p>
+                    {resume.languages.map((lang)=>
+                        <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
+                    )}
                 </div>
             </div>
 		</section>
