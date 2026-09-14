@@ -48,7 +48,7 @@ header {
     font-size: 18px;
 }
 
-.lang:nth-child(2) > a {
+#selectedLang {
     text-decoration: underline 0.5px;
     text-underline-offset: 2px;
 }

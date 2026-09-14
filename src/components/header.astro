@@ -1,16 +1,12 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import '/src/styles/header.css';
-const homeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/');
 
+const homeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/');
 
 const curPath = Astro.url.pathname;
 const curLocale = Astro.currentLocale ?? "/";
 const pathNoLocale = curPath.replace("/" + curLocale, "");
-console.log(curPath);
-console.log(curLocale);
-console.log(pathNoLocale);
-
 ---
 
 <header>
@@ -19,9 +15,9 @@ console.log(pathNoLocale);
             <div><a href={homeUrl}>HOME</a></div>
         </div>
         <div id="languages">
-            <div class="lang"><a href={"/pt" + pathNoLocale}>PT</a> - </div>
-            <div class="lang"><a href={pathNoLocale}>EN</a> - </div>
-            <div class="lang"><a href={"/jp" + pathNoLocale}>JP</a></div>
+            <div class="lang"><a id={curLocale == 'pt'? "selectedLang" : ""} href={"/pt" + pathNoLocale}>PT</a> - </div>
+            <div class="lang"><a id={curLocale == 'en'? "selectedLang" : ""} href={pathNoLocale}>EN</a> - </div>
+            <div class="lang"><a id={curLocale == 'jp'? "selectedLang" : ""} href={"/jp" + pathNoLocale}>JP</a></div>
         </div>
         <div id="contacts">
             <a class="contact" href="https://github.com/Mateus-Cerejo" target="_blank"><img src="/github.svg" alt="github"></a>
