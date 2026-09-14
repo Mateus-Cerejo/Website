@@ -1,9 +1,18 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 
 import '/src/styles/global.css';
 import '/src/styles/index.css';
+
+const aboutUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/about');
+const homeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/');
+const resumeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/resume');
+const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
+const notFound404Url = getRelativeLocaleUrl(Astro.currentLocale!, '/404');
+
 ---
 
 <html lang="en">
@@ -21,25 +30,16 @@ import '/src/styles/index.css';
 		<Header/>
 		<section id="content">
 			<div id="intro">
-				<!-- <div id="intro-left">
-					<img class="avatar" src="/avatar-low-rez.jpg" alt="Avatar">
-					<a id="about" href="/about">About</a>
-				</div> -->
-				
 				<div id="intro-right">
 					<p id="intro-name">Mateus Cerejo</p>
 					<p id="intro-slogan">Software Engineer</p>
-					<!-- <div id="mobile-about">
-						<img class="avatar" src="/avatar-low-rez.jpg" alt="Avatar">
-						<a id="about" href="/about">About</a>
-					</div> -->
 				</div>
 			</div>
 			<div id="navigation">
 				<!-- TODO wrap with div to make clickable zone smaller -->
-				<a href="/about">About</a>
-				<a href="/projects">Projects & Experiments</a>
-				<a href="/resume">Curriculum Vitae</a>
+				<a href={aboutUrl}>About</a>
+				<a href={projectsUrl}>Projects & Experiments</a>
+				<a href={resumeUrl}>Curriculum Vitae</a>
 			</div>
 		</section>
 		<Footer/>

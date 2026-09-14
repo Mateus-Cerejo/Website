@@ -7,4 +7,8 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: 'https://mateuscerejo.com',
   adapter: cloudflare(),
+  i18n: {
+    locales: ["pt", "en", "jp"],
+    defaultLocale: "en",
+  }
 });

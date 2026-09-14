@@ -1,0 +1,47 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import Header from '../../components/header.astro';
+import Footer from '../../components/footer.astro';
+
+import '/src/styles/global.css';
+import '/src/styles/index.css';
+
+const aboutUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/about');
+const homeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/');
+const resumeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/resume');
+const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
+const notFound404Url = getRelativeLocaleUrl(Astro.currentLocale!, '/404');
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<script src="/src/dev/debug.ts"/>
+
+		<title>Mateus Cerejo - Portfolio</title>
+	</head>
+	<body>
+		<Header/>
+		<section id="content">
+			<div id="intro">
+				<div id="intro-right">
+					<p id="intro-name">Mateus Cerejo</p>
+					<p id="intro-slogan">Software Engineer</p>
+				</div>
+			</div>
+			<div id="navigation">
+				<!-- TODO wrap with div to make clickable zone smaller -->
+				<a href={aboutUrl}>About</a>
+				<a href={projectsUrl}>Projects & Experiments</a>
+				<a href={resumeUrl}>履歴書</a>
+			</div>
+		</section>
+		<Footer/>
+	</body>
+</html>

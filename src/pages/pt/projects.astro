@@ -1,0 +1,58 @@
+---
+import '/src/styles/global.css';
+import '/src/styles/projects.css';
+
+import Header from '../../components/header.astro';
+import Footer from '../../components/footer.astro';
+import Project from '../../components/project.astro';
+
+
+const projects = [
+	{
+		name: "CLOUDS",
+		desc: "OpenGL & C++ Experiment",
+		tags: ["OpenGL", "C++"],
+		imgSrc: "/project1.png"
+	},
+	{
+		name: "WLTS",
+		desc: "Desktop Multiplayer Game",
+		tags: ["Unity", "C#", "Blender"],
+		imgSrc: "/soon.png"
+	},
+	{
+		name: "Boomerang",
+		desc: "Wireless Split Keyboard",
+		tags: ["Kicad", "Orca Slicer"],
+		imgSrc: "/soon.png"
+	}
+];
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<script src="/src/dev/debug.ts"/>
+		
+		<title>Mateus Cerejo - Projects</title>
+	</head>
+	<body>
+		<Header/>
+		<section id="content">
+			<p id="pageTitle">Projects & Experiments</p>
+			<div id="galleryWrapper">
+				<div id="gallery">
+					{projects.map((proj)=>{
+						return <Project name={proj.name} desc={proj.desc} tags={proj.tags} imgSrc={proj.imgSrc}></Project>;
+					})}
+				</div>
+			</div>
+		</section>
+		<Footer/>
+	</body>
+</html>
