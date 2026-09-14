@@ -1,11 +1,23 @@
 ---
 import '/src/styles/footer.css';
 
+var location = 'Lisbon, Portugal'
+
+switch (Astro.currentLocale) {
+    case 'pt':
+        location = 'Lisboa, Portugal'
+        break;
+    case 'jp':
+        location = 'リスボン、ポルトガル'
+    default:
+        break;
+}
+
 ---
 <footer>
     <div id="footer-wrap">
         <a href="mailto:mateuscerejo@proton.me">mateuscerejo@proton.me</a>
-        <p>Lisbon, Portugal</p>
+        <p>{location}</p>
     </div>
     <a id="version" href="https://github.com/Mateus-Cerejo/Website" target="_blank">v0.4.0</a>
 </footer>
