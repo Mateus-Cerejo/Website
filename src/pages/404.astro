@@ -1,5 +1,7 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import '/src/styles/global.css';
+const homeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/');
 ---
 
 <html lang="en">
@@ -14,7 +16,7 @@ import '/src/styles/global.css';
 	<body>
 		<section id="content">
 			<p>what are you doing here?</p>
-            <p>sorry i'll go <a href="/">back</a></p>
+            <p>sorry i'll go <a href={homeUrl}>back</a></p>
 		</section>
 	</body>
 </html>

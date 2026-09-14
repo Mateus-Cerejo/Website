@@ -1,9 +1,14 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
 import Header from '../../components/header.astro';
 import Footer from '../../components/footer.astro';
 
 import '/src/styles/global.css';
 import '/src/styles/about.css'
+
+const resumeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/resume');
+const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 
 var duolingoStreak = 'Fetching streak o_o'
 
@@ -36,7 +41,7 @@ try {
 		<Header/>
 		<section id="content">
 			<p id="pageTitle">About</p>
-            <p id="intro">Hello this page is for a more personal introduction, maybe what you are looking for is <a href="/projects" class="bold">/projects</a> & <a href="resume" class="bold">/resume</a>.</p>
+            <p id="intro">Hello this page is for a more personal introduction, maybe what you are looking for is <a href={projectsUrl} class="bold">/projects</a> & <a href={resumeUrl} class="bold">/resume</a>.</p>
             <div id="blocks">
 				<div id="imgMe" class="imgBlock">
 					<img src="/mepng.png" alt="picture">
