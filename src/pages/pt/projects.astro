@@ -10,19 +10,19 @@ import Project from '../../components/project.astro';
 const projects = [
 	{
 		name: "CLOUDS",
-		desc: "OpenGL & C++ Experiment",
+		desc: "Experiência de OpenGL & C++",
 		tags: ["OpenGL", "C++"],
 		imgSrc: "/project1.png"
 	},
 	{
 		name: "WLTS",
-		desc: "Desktop Multiplayer Game",
+		desc: "Jogo Desktop Multiplayer",
 		tags: ["Unity", "C#", "Blender"],
 		imgSrc: "/soon.png"
 	},
 	{
 		name: "Boomerang",
-		desc: "Wireless Split Keyboard",
+		desc: "Teclado sem fios dividido",
 		tags: ["Kicad", "Orca Slicer"],
 		imgSrc: "/soon.png"
 	}
@@ -39,12 +39,12 @@ const projects = [
 		
 		<script src="/src/dev/debug.ts"/>
 		
-		<title>Mateus Cerejo - Projects</title>
+		<title>Mateus Cerejo - Projetos</title>
 	</head>
 	<body>
 		<Header/>
 		<section id="content">
-			<p id="pageTitle">Projects & Experiments</p>
+			<p id="pageTitle">Projetos & Experiências</p>
 			<div id="galleryWrapper">
 				<div id="gallery">
 					{projects.map((proj)=>{
