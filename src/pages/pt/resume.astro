@@ -9,31 +9,31 @@ const resume = {
     education: {
         degrees: [
             {
-                title: "Bachelor's Degree - Software Engineering",
+                title: "Bachelor's Degree - Engenharia Informática",
                 entity: "Instituto Politécnico de Setubal",
                 date: "2021 - 2024",
-                grade: "ECTS Grade: B"
+                grade: "Nota ECTS: B"
             }
         ]
     },
     workExperience: {
         jobs: [
             {
-                title: "Middleware Developer",
+                title: "Desenvolvedor de Middleware",
                 entity: "Bane Tech",
                 date: "Mar. 2025 - Mar. 2026",
                 tasks: [
-                    "Developed high performance services",
-                    "Monitored critical infrastructure"
+                    "Desenvolvimento de serviços de alta performance",
+                    "Monitorização de infraestrutura crítica"
                 ]
             },
             {
-                title: "React Frontend Internship",
+                title: "Estágio de Frontend com React",
                 entity: "INSTICC",
                 date: "Sep. 2024 - Nov. 2024",
                 tasks: [
-                    "Carried out migration of codebase",
-                    "Corrected and improved existing UI to fit user needs"
+                    "Migração do código fonte",
+                    "Correção da UI existente para satisfazer os requesitos dos utilizadores"
                 ]   
             }
         ]
@@ -58,21 +58,21 @@ const resume = {
             ]
         },
         {
-            title: "Graphics programming",
+            title: "Programação Gráfica",
             skills: [
                 "OpenGL",
                 "GLSL",
             ]
         },
         {
-            title: "Automation / Scripting",
+            title: "Automação / Scripting",
             skills: [
                 "Python",
                 "bash",
             ]
         },
         {
-            title: "Game Development",
+            title: "Desenvolvimento de Videojogos",
             skills: [
                 "Unity",
                 "Blender",
@@ -80,7 +80,7 @@ const resume = {
             ]
         },
         {
-            title: "Project Management",
+            title: "Gestão  de Projetos",
             skills: [
                 "Jira",
                 "Confluence",
@@ -89,7 +89,7 @@ const resume = {
             ]
         },
         {
-            title: "Other",
+            title: "Outros",
             skills: [
                 "Git",
                 "C",
@@ -116,35 +116,35 @@ const resume = {
     languages: [
         {
             name:"Português", 
-            level: "Fluent",
+            level: "Fluente",
             otherNames: "Português Portuguese ポルトガル語"
         },
         {
             name:"English", 
-            level: "Proficient",
+            level: "Proficiente",
             otherNames: "Inglês English 英語"
         },
         {
             name:"日本語", 
-            level: "Basic",
+            level: "Básico",
             otherNames: "Japonês Japanese 日本語"
         },
     ],
     projects: [
         {
-            title: "WLTS - Game",
-            tooltip: "We Love Typing Spells - Game"
+            title: "WLTS - Jogo",
+            tooltip: "We Love Typing Spells - Jogo"
         },
         {
             title: "Portfolio - Website",
-            tooltip: "You are here :)"
+            tooltip: "Tu estás aqui! :)"
         },
         {
-            title: "Clouds - Concept",
+            title: "Clouds - Conceito",
             tooltip: ""
         },
         {
-            title: "Boomerang - Keyboard",
+            title: "Boomerang - Teclado",
             tooltip: ""
         }
     ],
@@ -165,26 +165,26 @@ const resume = {
 	<body>
 		<Header/>
 		<section id="content">
-			<p id="pageTitle">履歴書</p>
+			<p id="pageTitle">Curriculum Vitae</p>
             <div id="requestPDFSection">
-                <p>PDF VERSION</p>
-                <a href="mailto:mateuscerejo@proton.me?subject=Request%20for%20resume%20pdf" title="Request resume pdf"><img id="requestPDFBtn" src="/email.svg" alt="Request resume pdf"></a>
+                <p>VERSÃO PDF</p>
+                <a href="mailto:mateuscerejo@proton.me?subject=Requerimento%20do%20CV%20em%20pdf" title="Requerimento do CV em PDF"><img id="requestPDFBtn" src="/email.svg" alt="Requerimento do CV em PDF"></a>
             </div>
             <div id="flexResume">
                 <div id="listLeft">
                     <div id="cvCategoryEducation">
-                        <p class="cvCategoryTitle">Education</p>
+                        <p class="cvCategoryTitle">Educação</p>
                         {resume.education.degrees.map((degree)=>
                             <div class="degree">
                                 <p class="degreeTitle">{degree.title}</p>
                                 <p class="degreeSchoolName">{degree.entity}</p>
                                 <p class="degreeDates">{degree.date}</p>
-                                <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"/></a></p>
+                                <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="Nota ECTS"/></a></p>
                             </div>
                         )}
                     </div>
                     <div id="cvCategorySkills">
-                        <p class="cvCategoryTitle">Relevant Skills</p>
+                        <p class="cvCategoryTitle">Skills Relevantes</p>
                         <div id="skillsList">
                             {resume.skillList.map((skillCatg)=>{
                                 if (skillCatg.title == "OOP") {
@@ -195,7 +195,7 @@ const resume = {
                         </div>
                     </div>
                     <div id="cvCategoryCertifications">
-                        <p class="cvCategoryTitle">Certifications</p>
+                        <p class="cvCategoryTitle">Certificações</p>
                         {resume.certifications.map((cert)=>
                             <div class="certification">
                                 <p class="certTitle">{cert.title}</p>
@@ -206,7 +206,7 @@ const resume = {
                         )}
                     </div>
                     <div id="cvCategoryLanguages">
-                        <p class="cvCategoryTitle">Languages</p>
+                        <p class="cvCategoryTitle">Idiomas</p>
                         {resume.languages.map((lang)=>
                             <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
                         )}
@@ -214,7 +214,7 @@ const resume = {
                 </div>
                 <div id="listRight">
                     <div id="cvCategoryWork">
-                        <p class="cvCategoryTitle">Work Experience</p>
+                        <p class="cvCategoryTitle">Experiência de Trabalho</p>
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
@@ -226,7 +226,7 @@ const resume = {
                         )}
                     </div>
                     <div id="cvCategoryProjects">
-                        <p class="cvCategoryTitle">Projects</p>
+                        <p class="cvCategoryTitle">Projetos</p>
                         {resume.projects.map((proj)=>
                             <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
                         )}
@@ -235,18 +235,18 @@ const resume = {
             </div>
             <div id="listResume">
                 <div id="cvCategoryEducation">
-                    <p class="cvCategoryTitle">Education</p>
+                    <p class="cvCategoryTitle">Educação</p>
                     {resume.education.degrees.map((degree)=>
                         <div class="degree">
                             <p class="degreeTitle">{degree.title}</p>
                             <p class="degreeSchoolName">{degree.entity}</p>
                             <p class="degreeDates">{degree.date}</p>
-                            <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="ECTS grading"/></a></p>
+                            <p class="degreeGrade">{degree.grade} <a href="https://en.wikipedia.org/wiki/ECTS_grading_scale" target="_blank" title="European Credit Transfer and Accumulation System"><img class="infoImg" src="/info.svg" alt="Nota ECTS"/></a></p>
                         </div>
                     )}
                 </div>
                 <div id="cvCategoryWork">
-                    <p class="cvCategoryTitle">Work Experience</p>
+                    <p class="cvCategoryTitle">Experiência de Trabalho</p>
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
@@ -259,7 +259,7 @@ const resume = {
                     )}
                 </div>
                 <div id="cvCategorySkills">
-                    <p class="cvCategoryTitle">Relevant Skills</p>
+                    <p class="cvCategoryTitle">Skills Relevantes</p>
                     <div id="skillsList">
                         {resume.skillList.map((skillCatg)=>{
                             if (skillCatg.title == "OOP") {
@@ -270,7 +270,7 @@ const resume = {
                     </div>
                 </div>
                 <div id="cvCategoryCertifications">
-                    <p class="cvCategoryTitle">Certifications</p>
+                    <p class="cvCategoryTitle">Certificações</p>
                     {resume.certifications.map((cert)=>
                         <div class="certification">
                             <p class="certTitle">{cert.title}</p>
@@ -281,13 +281,13 @@ const resume = {
                     )}
                 </div>
                 <div id="cvCategoryProjects">
-                    <p class="cvCategoryTitle">Projects</p>
+                    <p class="cvCategoryTitle">Projetos</p>
                     {resume.projects.map((proj)=>
                         <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
                     )}
                 </div>
                 <div id="cvCategoryLanguages">
-                    <p class="cvCategoryTitle">Languages</p>
+                    <p class="cvCategoryTitle">Idiomas</p>
                     {resume.languages.map((lang)=>
                         <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
                     )}
