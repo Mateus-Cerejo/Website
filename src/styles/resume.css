@@ -176,6 +176,23 @@
     margin-bottom: 0px;
 }
 
+
+@keyframes colorRotate {
+    0% {color: red;}
+    20% {color: rgb(253, 249, 3)}
+    40% {color: rgb(0, 255, 21)}
+    60% {color: rgb(0, 81, 255);}
+    80% {color: rgb(255, 0, 255);}
+    100% {color: red;}
+}
+
+#wip {
+    animation-name: colorRotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-size: x-large;
+}
+
 @media only screen and (max-width: 1280px) {
     #flexResume {
         display: none;

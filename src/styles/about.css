@@ -254,6 +254,8 @@
     animation-name: colorRotate;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    font-size: x-large;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1280px) {
