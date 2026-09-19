@@ -177,6 +177,11 @@
 }
 
 
+.cvProject > span{
+    font-weight: bold;
+}
+
+
 @keyframes colorRotate {
     0% {color: red;}
     20% {color: rgb(253, 249, 3)}
