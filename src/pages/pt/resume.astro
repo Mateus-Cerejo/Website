@@ -20,7 +20,7 @@ const resume = {
         jobs: [
             {
                 title: "Desenvolvedor de Middleware",
-                entity: "Bane Tech",
+                entity: "<redacted>",
                 date: "Mar. 2025 - Mar. 2026",
                 tasks: [
                     "Desenvolvimento de serviços de alta performance",
@@ -29,7 +29,7 @@ const resume = {
             },
             {
                 title: "Estágio de Frontend com React",
-                entity: "INSTICC",
+                entity: "<redacted>",
                 date: "Sep. 2024 - Nov. 2024",
                 tasks: [
                     "Migração do código fonte",
@@ -218,7 +218,7 @@ const resume = {
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity">{job.entity}</p>
+                                <p class="jobEntity" title="Só na versão PDF">{job.entity}</p>
                                 {job.tasks.map((task)=>
                                     <p class="jobTask">{task}</p>
                                 )}
@@ -250,7 +250,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity">{job.entity}</p>
+                            <p class="jobEntity" title="Só na versão PDF">{job.entity}</p>
                             <p class="jobDate">{job.date}</p>
                             {job.tasks.map((task)=>
                                 <p class="jobTask">{task}</p>
