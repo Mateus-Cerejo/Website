@@ -170,9 +170,8 @@ const resume = {
 		<Header/>
 		<section id="content">
 			<p id="pageTitle">Curriculum Vitae</p>
-            <div id="requestPDFSection">
-                <p>VERSÃO PDF</p>
-                <a href="mailto:mateuscerejo@proton.me?subject=Requerimento%20do%20CV%20em%20pdf" title="Requerimento do CV em PDF"><img id="requestPDFBtn" src="/email.svg" alt="Requerimento do CV em PDF"></a>
+            <div id="requestPDFSection" title="Requerimento do CV em PDF">
+                <a href="mailto:mateuscerejo@proton.me?subject=Requerimento%20do%20CV%20em%20pdf">VERSÃO PDF<img id="requestPDFBtn" src="/email.svg" alt="Requerimento do CV em PDF"></a>
             </div>
             <div id="flexResume">
                 <div id="listLeft">
@@ -222,7 +221,7 @@ const resume = {
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity" title="Só na versão PDF">{job.entity}</p>
+                                <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
                                 {job.tasks.map((task)=>
                                     <p class="jobTask">{task}</p>
                                 )}
@@ -254,7 +253,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity" title="Só na versão PDF">{job.entity}</p>
+                            <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
                             <p class="jobDate">{job.date}</p>
                             {job.tasks.map((task)=>
                                 <p class="jobTask">{task}</p>

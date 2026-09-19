@@ -170,9 +170,8 @@ const resume = {
 		<Header/>
 		<section id="content">
 			<p id="pageTitle">Curriculum Vitae</p>
-            <div id="requestPDFSection">
-                <p>PDF VERSION</p>
-                <a href="mailto:mateuscerejo@proton.me?subject=Request%20for%20resume%20pdf" title="Request resume pdf"><img id="requestPDFBtn" src="/email.svg" alt="Request resume pdf"></a>
+            <div id="requestPDFSection" title="Request resume pdf">
+                <a href="mailto:mateuscerejo@proton.me?subject=Request%20for%20resume%20pdf">PDF VERSION<img id="requestPDFBtn" src="/email.svg" alt="Request resume pdf"></a>
             </div>
             <div id="flexResume">
                 <div id="listLeft">
@@ -222,7 +221,7 @@ const resume = {
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity" title="Only on PDF version">{job.entity}</p>
+                                <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
                                 {job.tasks.map((task)=>
                                     <p class="jobTask">{task}</p>
                                 )}
@@ -254,7 +253,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity" title="Only on PDF version">{job.entity}</p>
+                            <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
                             <p class="jobDate">{job.date}</p>
                             {job.tasks.map((task)=>
                                 <p class="jobTask">{task}</p>

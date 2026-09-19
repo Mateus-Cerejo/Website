@@ -29,6 +29,7 @@
 
     #requestPDFSection > a{
         display: flex;
+        font-weight: normal;
     }
 
 #requestPDFBtn {
