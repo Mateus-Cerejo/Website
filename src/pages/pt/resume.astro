@@ -132,19 +132,23 @@ const resume = {
     ],
     projects: [
         {
-            title: "WLTS - Jogo",
+            title: "WLTS",
+            type: "Jogo",
             tooltip: "We Love Typing Spells - Jogo"
         },
         {
-            title: "Portfolio - Website",
+            title: "Portfolio",
+            type: "Website",
             tooltip: "Tu estás aqui! :)"
         },
         {
-            title: "Clouds - Conceito",
+            title: "Clouds",
+            type: "Conceito",
             tooltip: ""
         },
         {
-            title: "Boomerang - Teclado",
+            title: "Boomerang",
+            type: "Teclado",
             tooltip: ""
         }
     ],
@@ -226,9 +230,9 @@ const resume = {
                         )}
                     </div>
                     <div id="cvCategoryProjects">
-                        <p class="cvCategoryTitle">Projetos</p>
+                        <p class="cvCategoryTitle">Projects</p>
                         {resume.projects.map((proj)=>
-                            <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
+                            <p class="cvProject" title={proj.tooltip}><span>{proj.title}</span> - {proj.type}</p>
                         )}
                     </div>
                 </div>
@@ -281,9 +285,9 @@ const resume = {
                     )}
                 </div>
                 <div id="cvCategoryProjects">
-                    <p class="cvCategoryTitle">Projetos</p>
+                    <p class="cvCategoryTitle">Projects</p>
                     {resume.projects.map((proj)=>
-                        <p class="cvProject" title={proj.tooltip}>{proj.title}</p>
+                        <p class="cvProject" title={proj.tooltip}><span>{proj.title}</span> - {proj.type}</p>
                     )}
                 </div>
                 <div id="cvCategoryLanguages">
