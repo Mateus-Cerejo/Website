@@ -10,21 +10,6 @@ import '/src/styles/about.css'
 const resumeUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/resume');
 const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 
-var duolingoStreak = 'Fetching streak o_o'
-
-try {
-	await fetch("https://www.duolingo.com/2017-06-30/users?username=Suetam0101 ", {
-		signal: AbortSignal.timeout(5000),
-	})
-	.then(response => response.json())
-	.then(data => {
-		duolingoStreak = data.users[0].streak + ' Days :)';
-	});
-	
-} catch (error) {
-	duolingoStreak = 'Couldn\'t fetch streak :(';
-}
-
 ---
 <html lang="en">
 	<head>
@@ -34,6 +19,23 @@ try {
 		<meta name="generator" content={Astro.generator} />
 		
 		<script src="/src/dev/debug.ts"/>
+		<script>
+			fetch("https://www.duolingo.com/2017-06-30/users?username=Suetam0101 ", {
+				signal: AbortSignal.timeout(5000),
+			})
+			.then((r) => r.json())
+			.then((data) => {
+				const elems = document.getElementsByClassName("blockJpRight");
+				
+				for (let index = 0; index < elems.length; index++) {
+					const element = elems[index];
+					element.getElementsByTagName("p")[0].textContent = data.users[0].streak + ' Days :)';
+				}
+			})
+			.catch((e) =>{
+				document.getElementsByClassName("blockJpRight")[0].getElementsByTagName("p")[0].textContent = 'Couldn\'t fetch streak :(';
+			})
+		</script>
 
 		<title>Mateus Cerejo - About</title>
 	</head>
@@ -44,7 +46,7 @@ try {
             <p id="intro">Hello this page is for a more personal introduction, maybe what you are looking for is <a href={projectsUrl} class="bold">/projects</a> & <a href={resumeUrl} class="bold">/resume</a>.</p>
             <div id="blocks">
 				<div id="imgMe" class="imgBlock">
-					<img src="/mepng.png" alt="picture">
+					<img src="/me.webp" alt="picture">
 				</div>
 				<div id="blockIntro" class="block">
 					<p>> Hello</p>
@@ -77,9 +79,9 @@ try {
 						<p>> Consuming Japanese media</p>
 						<p>That’s all you really need</p>
 					</div>
-					<div id="blockJpRight">
+					<div class="blockJpRight">
 						<img src="/duo.png" alt="duolingo">
-						<p>{duolingoStreak}</p>
+						<p>Fetching streak o_o</p>
 					</div>
 				</div>
 				<div id="blockGame" class="block">
@@ -162,7 +164,7 @@ try {
 			</div>
 			<div id="blocksMobile">
 				<div id="imgMe" class="imgBlock">
-					<img src="/mepng.png" alt="picture">
+					<img src="/me.webp" alt="picture">
 				</div>
 				<div id="blockIntro" class="block">
 					<p>> Hello</p>
@@ -194,9 +196,9 @@ try {
 						<p>> Consuming Japanese media</p>
 						<p>That’s all you really need</p>
 					</div>
-					<div id="blockJpRight">
+					<div class="blockJpRight">
 						<img src="/duo.png" alt="duolingo">
-						<p>{duolingoStreak}</p>
+						<p>Fetching streak o_o</p>
 					</div>
 				</div>
 				<div id="blockGame" class="block">
