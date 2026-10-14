@@ -6,4 +6,4 @@ You can check it out here: [mateuscerejo.com](https://mateuscerejo.com)
 Its currently availabe in **Portuguese** and **English**. **Japanese** coming soon :)
 
 # Screenshots
-![Home Page](/public/readme/home.png)
+![Home Page](/readme/home.png)
