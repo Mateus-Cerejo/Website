@@ -21,8 +21,8 @@ const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 		<script src="/src/dev/debug.ts"/>
 		
 		<script>
-			fetch("https://www.duolingo.com/2017-06-30/users?username=Suetam0101 ", {
-				signal: AbortSignal.timeout(5000),
+			fetch("https://website-kv-worker.mateuslcerejo.workers.dev", {
+				signal: AbortSignal.timeout(5000)
 			})
 			.then((r) => r.json())
 			.then((data) => {
@@ -30,11 +30,11 @@ const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 				
 				for (let index = 0; index < elems.length; index++) {
 					const element = elems[index];
-					element.getElementsByTagName("p")[0].textContent = data.users[0].streak + ' Days :)';
+					element.getElementsByTagName("p")[0].textContent = data + ' Dias :)';
 				}
 			})
 			.catch((e) =>{
-				document.getElementsByClassName("blockJpRight")[0].getElementsByTagName("p")[0].textContent = 'Couldn\'t fetch streak :(';
+				document.getElementsByClassName("blockJpRight")[0].getElementsByTagName("p")[0].textContent = 'Falha de conexão :(';
 			})
 		</script>
 
@@ -82,7 +82,7 @@ const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 					</div>
 					<div class="blockJpRight">
 						<img src="/duo.png" alt="duolingo">
-						<p>Fetching streak o_o</p>
+						<p>À procura da streak o_o</p>
 					</div>
 				</div>
 				<div id="blockGame" class="block">
@@ -199,7 +199,7 @@ const projectsUrl = getRelativeLocaleUrl(Astro.currentLocale!, '/projects');
 					</div>
 					<div class="blockJpRight">
 						<img src="/duo.png" alt="duolingo">
-						<p>Fetching streak o_o</p>
+						<p>À procura da streak o_o</p>
 					</div>
 				</div>
 				<div id="blockGame" class="block">
