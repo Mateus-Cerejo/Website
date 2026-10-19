@@ -205,8 +205,7 @@ const resume = {
                         <p class="cvCategoryTitle">Certificações</p>
                         {resume.certifications.map((cert)=>
                             <div class="certification">
-                                <p class="certTitle">{cert.title}</p>
-                                <p class="certEntity">{cert.entity}</p>
+                                <p class="certTitle">{cert.title}, <span>{cert.entity}</span></p>
                                 <p class="certDate">{cert.date}</p>
                             </div>
                         )}
@@ -237,7 +236,7 @@ const resume = {
                     <div id="cvCategoryLanguages">
                         <p class="cvCategoryTitle">Idiomas</p>
                         {resume.languages.map((lang)=>
-                            <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
+                            <p class="cvLanguage" title={lang.otherNames}><span>{lang.name}</span> - {lang.level}</p>
                         )}
                     </div>
                 </div>
@@ -285,8 +284,7 @@ const resume = {
                     <p class="cvCategoryTitle">Certificações</p>
                     {resume.certifications.map((cert)=>
                         <div class="certification">
-                            <p class="certTitle">{cert.title}</p>
-                            <p class="certEntity">{cert.entity}</p>
+                            <p class="certTitle">{cert.title}, <span>{cert.entity}</span></p>
                             <p class="certDate">{cert.date}</p>
                         </div>
                     )}
@@ -300,7 +298,7 @@ const resume = {
                 <div id="cvCategoryLanguages">
                     <p class="cvCategoryTitle">Idiomas</p>
                     {resume.languages.map((lang)=>
-                        <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
+                        <p class="cvLanguage" title={lang.otherNames}><span>{lang.name}</span> - {lang.level}</p>
                     )}
                 </div>
             </div>
