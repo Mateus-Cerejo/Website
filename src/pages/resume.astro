@@ -211,12 +211,6 @@ const resume = {
                             </div>
                         )}
                     </div>
-                    <div id="cvCategoryLanguages">
-                        <p class="cvCategoryTitle">Languages</p>
-                        {resume.languages.map((lang)=>
-                            <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
-                        )}
-                    </div>
                 </div>
                 <div id="listRight">
                     <div id="cvCategoryWork">
@@ -234,12 +228,18 @@ const resume = {
                             </div>
                         )}
                     </div>
-                    <div id="cvCategoryProjects">
+                    <div id="cvCategoryLanguages">
+                        <p class="cvCategoryTitle">Languages</p>
+                        {resume.languages.map((lang)=>
+                            <p class="cvLanguage" title=""><span>{lang.name}</span> - {lang.level}</p>
+                        )}
+                    </div>
+                    <!-- <div id="cvCategoryProjects">
                         <p class="cvCategoryTitle">Projects</p>
                         {resume.projects.map((proj)=>
                             <p class="cvProject" title={proj.tooltip}><span>{proj.title}</span> - {proj.type}</p>
                         )}
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div id="listResume">
@@ -291,12 +291,12 @@ const resume = {
                         </div>
                     )}
                 </div>
-                <div id="cvCategoryProjects">
+                <!-- <div id="cvCategoryProjects">
                     <p class="cvCategoryTitle">Projects</p>
                     {resume.projects.map((proj)=>
                         <p class="cvProject" title={proj.tooltip}><span>{proj.title}</span> - {proj.type}</p>
                     )}
-                </div>
+                </div> -->
                 <div id="cvCategoryLanguages">
                     <p class="cvCategoryTitle">Languages</p>
                     {resume.languages.map((lang)=>
