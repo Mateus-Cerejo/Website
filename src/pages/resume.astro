@@ -23,8 +23,9 @@ const resume = {
                 entity: "<redacted>",
                 date: "Mar. 2025 - Mar. 2026",
                 tasks: [
-                    "Developed high performance services",
-                    "Monitored critical infrastructure"
+                    "Built RESTful and SOAP APIs with Apache Camel (Java), to allow the communication of dozens of different applications, servers and databases in a Service-Oriented Architecture.",
+                    "Monitored and analyzed MySQL and SQL Server databases in order to identify and resolve bugs, occasionally manipulating those databases.",
+                    "Collaborated with team members in an agile / Scrum methodology and used Git and BitBucket to manage code."
                 ]
             },
             {
@@ -32,8 +33,8 @@ const resume = {
                 entity: "<redacted>",
                 date: "Sep. 2024 - Nov. 2024",
                 tasks: [
-                    "Carried out migration of codebase",
-                    "Corrected and improved existing UI to fit user needs"
+                    "Built and fixed React UI components for an internal management web application using HTML, CSS, JavaScript and TypeScript.",
+                    "Carried out the migration of TypeScript components to JavaScript for consistency with other internal apps."
                 ]   
             }
         ]
@@ -101,15 +102,20 @@ const resume = {
     ],
     certifications: [
         {
+            title: "Advanced English C2",
+            entity: "Cambridge",
+            date: "2026",
+        },
+        {
+            title: "AWS Certified Solutions Architect - Associate",
+            entity: "AWS",
+            date: "IN PROGRESS",
+        },
+        {
             title: "Computer Graphics With Modern OpenGL",
             entity: "Udemy",
             date: "2026",
         },
-        {
-            title: "Advanced English C2",
-            entity: "Cambridge",
-            date: "2026",
-        }
     ],
     languages: [
         {
@@ -219,9 +225,12 @@ const resume = {
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
                                 <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
-                                {job.tasks.map((task)=>
-                                    <p class="jobTask">{task}</p>
-                                )}
+                                <p></p>
+                                <ul>
+                                    {job.tasks.map((task)=>
+                                        <li class="jobTask">{task}</li>
+                                    )}
+                                </ul>
                             </div>
                         )}
                     </div>
@@ -252,9 +261,12 @@ const resume = {
                             <p class="jobTitle">{job.title}</p>
                             <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
                             <p class="jobDate">{job.date}</p>
-                            {job.tasks.map((task)=>
-                                <p class="jobTask">{task}</p>
-                            )}
+                            <p></p>
+                            <ul>
+                                {job.tasks.map((task)=>
+                                    <li class="jobTask">{task}</li>
+                                )}
+                            </ul>
                         </div>
                     )}
                 </div>

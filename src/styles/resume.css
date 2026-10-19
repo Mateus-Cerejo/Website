@@ -47,11 +47,23 @@
 #listResume {
     display: none;
     margin-bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#listRight {
+    width: 50%;
+    padding: 0 10px;
+}
+
+#listLeft {
+    width: 50%;
 }
 
 .cvCategoryTitle {
     font-size: 34px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .degree {
@@ -61,13 +73,11 @@
 .degreeTitle {
     font-size: 26px;
     margin-bottom: 0px;
-    font-weight: bold;
 }
 
 .degreeSchoolName {
     margin-top: 4px;
     margin-bottom: 0px;
-    font-weight: bold;
 }
 
 .degreeDates {
@@ -90,12 +100,12 @@
 }
 
 .skills > span{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .skills {
-    font-size: 20px;
+    font-size: 18px;
     padding: 6px 0;
 }
 
@@ -106,7 +116,6 @@
 .certTitle {
     font-size: 26px;
     margin-bottom: 0;
-    font-weight: bold;
 }
 
 .certTitle > span {
@@ -115,7 +124,6 @@
 }
 
 .certEntity {
-    font-weight: bold;
     margin-top: 4px;
     margin-bottom: 0px;
 }
@@ -138,7 +146,6 @@
 }
 
 .cvLanguage > span {
-    font-weight: bold;
 }
 
 .job {
@@ -147,7 +154,6 @@
 
 .jobTitle {
     font-size: 26px;
-    font-weight: bold;
     margin-bottom: 0;
 }
 
@@ -162,9 +168,13 @@
 }
 
 .jobEntity {
-    font-weight: bold;
     margin-top: 4px;
     margin-bottom: 0px;
+}
+
+.jobTask {
+    margin: 8px 0px;
+    text-align: justify;
 }
 
 #cvCategoryProjects {
@@ -172,14 +182,13 @@
 
 .cvProject {
     margin-left: var(--resumeIndent);
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 8px;
     margin-bottom: 0px;
 }
 
 
 .cvProject > span{
-    font-weight: bold;
 }
 
 

@@ -23,8 +23,9 @@ const resume = {
                 entity: "<redacted>",
                 date: "Mar. 2025 - Mar. 2026",
                 tasks: [
-                    "Desenvolvimento de serviços de alta performance",
-                    "Monitorização de infraestrutura crítica"
+                    "Desenvolvi APIs RESTful e SOAP com Apache Camel (Java), para permitir a comunicação entre dezenas de aplicações, servidores e bases de dados diferentes numa arquitetura orientada a serviços.",
+                    "Monitorizei e analisei bases de dados MySQL e SQL Server com o objetivo de identificar e resolver erros, manipulando ocasionalmente essas bases de dados.",
+                    "Colaborei com a minha equipa numa metodologia ágil/Scrum e utilizei o Git e o BitBucket para gerir o código."
                 ]
             },
             {
@@ -32,8 +33,8 @@ const resume = {
                 entity: "<redacted>",
                 date: "Sep. 2024 - Nov. 2024",
                 tasks: [
-                    "Migração do código fonte",
-                    "Correção da UI existente para satisfazer os requesitos dos utilizadores"
+                    "Criei e corrigi componentes UI de React para uma aplicação web interna de gestão, utilizando HTML, CSS, JavaScript e TypeScript.",
+                    "Realizei a migração de componentes TypeScript para JavaScript, de forma a garantir a consistência com outras aplicações internas."
                 ]   
             }
         ]
@@ -101,15 +102,20 @@ const resume = {
     ],
     certifications: [
         {
+            title: "Advanced English C2",
+            entity: "Cambridge",
+            date: "2026",
+        },
+        {
+            title: "AWS Certified Solutions Architect - Associate",
+            entity: "AWS",
+            date: "EM PROGRESSO",
+        },
+        {
             title: "Computer Graphics With Modern OpenGL",
             entity: "Udemy",
             date: "2026",
         },
-        {
-            title: "Advanced English C2",
-            entity: "Cambridge",
-            date: "2026",
-        }
     ],
     languages: [
         {
@@ -219,9 +225,12 @@ const resume = {
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
                                 <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
-                                {job.tasks.map((task)=>
-                                    <p class="jobTask">{task}</p>
-                                )}
+                                <p></p>
+                                <ul>
+                                    {job.tasks.map((task)=>
+                                        <li class="jobTask">{task}</li>
+                                    )}
+                                </ul>
                             </div>
                         )}
                     </div>
@@ -252,9 +261,12 @@ const resume = {
                             <p class="jobTitle">{job.title}</p>
                             <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
                             <p class="jobDate">{job.date}</p>
-                            {job.tasks.map((task)=>
-                                <p class="jobTask">{task}</p>
-                            )}
+                            <p></p>
+                            <ul>
+                                {job.tasks.map((task)=>
+                                    <li class="jobTask">{task}</li>
+                                )}
+                            </ul>
                         </div>
                     )}
                 </div>
