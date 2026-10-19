@@ -1,13 +1,18 @@
 ---
-const { name, desc, tags, imgSrc } = Astro.props;
+const { name, desc, tags, imgSrc, url } = Astro.props;
 
 ---
 
 <div class="projectCard">
-    <div class="projectTags">
-        {tags.map((tag: String) => {
-            return <p class="projectTag">{tag}</p>;
-        })}
+    <div class="projectTop">
+        <div class="projectTags">
+            {tags.map((tag: String) => {
+                return <p class="projectTag">{tag}</p>;
+            })}
+        </div>
+        <div class="projectUrls">
+            {url? <a class="projectUrl" href={url} target="_blank">GITHUB <img src="/external.svg" alt="external link"></a> : null}
+        </div>
     </div>
     <div class="projectImgWrap">
         <!-- <div class="projectImg"></div> -->

@@ -9,22 +9,32 @@ import Project from '../components/project.astro';
 
 const projects = [
 	{
+		name: "Personal Website",
+		desc: "You're here!",
+		tags: ["Astro", "JavaScript", "HTML", "CSS"],
+		imgSrc: "/project_website.jpg",
+		url: "https://github.com/Mateus-Cerejo/Website"
+	},
+	{
 		name: "CLOUDS",
 		desc: "OpenGL & C++ Experiment",
 		tags: ["OpenGL", "C++"],
-		imgSrc: "/project1.png"
+		imgSrc: "/project_clouds.png",
+		url: "https://github.com/Mateus-Cerejo/Clouds"
 	},
 	{
 		name: "WLTS",
 		desc: "Desktop Multiplayer Game",
 		tags: ["Unity", "C#", "Blender"],
-		imgSrc: "/soon.jpg"
+		imgSrc: "/soon.jpg",
+		url: ""
 	},
 	{
 		name: "Boomerang",
 		desc: "Wireless Split Keyboard",
 		tags: ["Kicad", "Orca Slicer"],
-		imgSrc: "/soon.jpg"
+		imgSrc: "/project_keyboard.png",
+		url: "https://github.com/Mateus-Cerejo/Keyboard-Boomerang"
 	}
 ];
 
@@ -48,7 +58,7 @@ const projects = [
 			<div id="galleryWrapper">
 				<div id="gallery">
 					{projects.map((proj)=>{
-						return <Project name={proj.name} desc={proj.desc} tags={proj.tags} imgSrc={proj.imgSrc}></Project>;
+						return <Project name={proj.name} desc={proj.desc} tags={proj.tags} imgSrc={proj.imgSrc} url={proj.url}></Project>;
 					})}
 				</div>
 			</div>

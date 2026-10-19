@@ -37,15 +37,32 @@
     margin: 30px 10px;
 }
 
-.projectTags {
-    text-align: start;
+.projectTop {
+    display: flex;
     padding: 5px;
+    justify-content: space-between;
+}
+
+.projectTags {
 }
 
 .projectTag {
     display: inline;
     margin: 0px 10px 0px 0px;
     border-radius: 3px;
+}
+
+.projectUrls {
+}
+
+.projectUrl {
+    display: inline;
+    margin: 0px 10px 0px 0px;
+    border-radius: 3px;
+}
+
+.projectUrl > img {
+    width: 14px;
 }
 
 .projectImgWrap {
