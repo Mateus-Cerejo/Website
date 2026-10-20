@@ -216,8 +216,9 @@ const resume = {
                         <p class="cvCategoryTitle">Work Experience</p>
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
-                                <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
+                                <p class="jobTitle">{job.title}</p>
+                                <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}<img class="infoImg" src="/info.svg" alt="Job entity"/></p>
+                                <p class="jobDate">{job.date}</p>
                                 <p></p>
                                 <ul>
                                     {job.tasks.map((task)=>
@@ -258,7 +259,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
+                            <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}<img style="color: white;" class="infoImg" src="/info.svg" alt="Job entity"/></p>
                             <p class="jobDate">{job.date}</p>
                             <p></p>
                             <ul>

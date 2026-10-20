@@ -196,9 +196,9 @@ const resume = {
                         <div id="skillsList">
                             {resume.skillList.map((skillCatg)=>{
                                 if (skillCatg.title == "OOP") {
-                                    return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                                    return <p class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>   
                                 }
-                                return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                                return <p class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>
                             })}
                         </div>
                     </div>
@@ -218,7 +218,7 @@ const resume = {
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
+                                <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}<img class="infoImg" src="/info.svg" alt="Job entity"/></p>
                                 <p></p>
                                 <ul>
                                     {job.tasks.map((task)=>
@@ -259,7 +259,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}</p>
+                            <p class="jobEntity" title="Request the pdf version to see where I've worked">{job.entity}<img class="infoImg" src="/info.svg" alt="Job entity"/></p>
                             <p class="jobDate">{job.date}</p>
                             <p></p>
                             <ul>
@@ -275,9 +275,9 @@ const resume = {
                     <div id="skillsList">
                         {resume.skillList.map((skillCatg)=>{
                             if (skillCatg.title == "OOP") {
-                                return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                                return <p class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>   
                             }
-                            return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                            return <p class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>
                         })}
                     </div>
                 </div>

@@ -195,9 +195,9 @@ const resume = {
                         <div id="skillsList">
                             {resume.skillList.map((skillCatg)=>{
                                 if (skillCatg.title == "OOP") {
-                                    return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                                    return <p class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>   
                                 }
-                                return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                                return <p class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>
                             })}
                         </div>
                     </div>
@@ -217,7 +217,7 @@ const resume = {
                         {resume.workExperience.jobs.map((job)=>
                             <div class="job">
                                 <p class="jobTitle">{job.title}<span> - {job.date}</span></p>
-                                <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
+                                <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}<img class="infoImg" src="/info.svg" alt="Empresa"/></p>
                                 <p></p>
                                 <ul>
                                     {job.tasks.map((task)=>
@@ -258,7 +258,7 @@ const resume = {
                     {resume.workExperience.jobs.map((job)=>
                         <div class="job">
                             <p class="jobTitle">{job.title}</p>
-                            <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}</p>
+                            <p class="jobEntity" title="Faz um requerimento da versão pdf para veres onde trabalhei">{job.entity}<img class="infoImg" src="/info.svg" alt="Empresa"/></p>
                             <p class="jobDate">{job.date}</p>
                             <p></p>
                             <ul>
@@ -274,9 +274,9 @@ const resume = {
                     <div id="skillsList">
                         {resume.skillList.map((skillCatg)=>{
                             if (skillCatg.title == "OOP") {
-                                return <li class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>   
+                                return <p class="skills" title="Object Oriented Programming"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>   
                             }
-                            return <li class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</li>
+                            return <p class="skills"><span>{skillCatg.title}</span> - {skillCatg.skills.join(', ')}</p>
                         })}
                     </div>
                 </div>
